@@ -20,7 +20,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'
+      callbackURL: '/auth/google/callback',
+      proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
       //      console.log('access token', accessToken);
@@ -28,7 +29,7 @@ passport.use(
       //      console.log('profile:', profile);
 
       // make a query first if collection exists already
-      // in the database. If now, then create a new record
+      // in the database. If not, then create a new record
       User.findOne({ googleId: profile.id }).then(existingUser => {
         if (existingUser) {
           // we already have a record with the given profile ID
