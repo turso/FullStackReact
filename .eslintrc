@@ -1,9 +1,13 @@
 {
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", {"singleQuote": true, 
-      "parser": "flow", "useTabs": "2"}]
-  }
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "flow"
+      }
+    ]
+  },
+  "parser": "babel-eslint"
 }
