@@ -14,5 +14,5 @@ export default [
     name: 'body',
     noValueError: 'You must provide a body for the message'
   },
-  { label: 'Recipient List', name: 'emails' }
+  { label: 'Recipient List', name: 'recipients' }
 ];
